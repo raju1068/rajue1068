@@ -1,233 +1,3 @@
-$ pip install python-telegram-bot --upgrade
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-cd python-telegram-bot
-python setup.py install
-PYTHONPATH
-cd 
-pip install python-telegram-bot --upgrade
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-cd python-telegram-bot
-python setup.py install
-TUTORIALDIR=src/saratest-192216/python_gae_quickstart-2018-01-15-21-55
-git clone https://github.com/GoogleCloudPlatform/python-docs-samples $TUTORIALDIR
-cd $TUTORIALDIR/appengine/standard/hello_world
-cat main.py
-cat app.yaml
-dev_appserver.py $PWD
-python setup.py install
-cd python-telegram-bot
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-cd python-telegram-bot
-python setup.py install
-get cwd
-get cwd()
-cd/
-cdget cwd()
-import os
-cd
-import os
-python setup.py install
-cd python-telegram-bot
-python setup.py install
-cd saratest-192216/local/lib/
-ls
-cd
-ls
-gcloud projects list
-dev_appserver.py ./
-cd python-telegram-bot
-python setup.py install
-pythonpath
-root
-cd raju1068@saratest-192216/local
-cd local
-via --install-dir
-/usr/local/lib/python2.7/dist-packages/
-cd /usr/local/lib/python2.7/dist-packages/
-chmod
-chmod --help
-os.access('/usr/local', os.W_OK)
-os.chmod(path, 0444)
-os.chmod(path, 0444)os.chmod(path , 0o777)
-os.chmod(path , 0o777)
-os.chmod(/usr/local/lib/python2.7/dist-packages , 0o777)
-os.chmod(/usr/local/lib/python2.7/dist-packages , 0777)
-vi sample
-ls
-os.access('/path/to/folder', os.W_OK)
-os.access('/usr/local/lib/python2.7/dist-packages', os.W_OK)
-def check_files(paths):
-cd python-telegram-bot
-os.access('/usr/local/lib/python2.7/dist-packages', os.W_OK)git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursivecd
-cd
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-python setup.py install
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-rem python-telegram-bot
-rm python-telegram-bot
-os.rmdir() cd 
-od.rmdir() python-telegram-bot
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-git clone https://github.com/python-telegram-bot/python-telegram-bot 
-pip install python-telegram-bot --upgrade
-cd python-telegram-bot
-python setup.py install
-sudo pip install kiteconnect
-python setup.py install
-sudo pip install setup.py
-sudo pip install setup
-sudo pip install python setup.py
-ls
-cd example
-cd examples
-ls
-timerbot.py
-pip install requests
-cd.
-cd ..
-pip install requests
-python my_simple_telegram_bot.py
-cd examples
-ls
-python timerbot.py
-vi timerbot.py
-cd /usr/bin/env
-cd
-/usr/bin/env
-cd /usr/bin/env
-/usr/bin/env python
-usr/bin/env python
-cd
-usr/bin/env python
-usr/bin/env 
-usr/bin/env python
-/usr/bin/env python python
-/usr/bin/env python python 
-usr/bin/env 
-cd /usr/bin/env
-/usr/bin/env python python
-usr/bin
-ls
-usr/bin/env python
-/usr/bin/env python python
-/usr/bin/env python
-cd python-telegram-bot
-/usr/bin/env python python
-/usr/bin/env python python 
-/usr/bin/env python python  python
-cd
-/usr/bin/env python python 
-/usr/bin/env python
-python -m telegram
-python -m pip install python-telegram-bot
-ls telegram
-ls
-cd python-telegram-bot
-ls
-cd telegram
-ls
-vi message.py
-print("Hello, world!")
-edit test.py
-create test.py
-.vi test.py
-vi test.py
-vi sara_bot.py
-python sara_bot.py
-vi sample.py
-edit sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-python sample.py
-vi
-vi sample.py
-ls
-cd
-ls
-cd
-ls telegram
--ltr
-ls
-cd
-cd python-telegram-bot
-python sample.py
-cd telegram
-python sample.py
-ImportError: No module named telegram.ext
-sudo apt-get install python3 python3-pip
-Requirement already up-to-date: python-telegram-bot==5.0.0 in /usr/lib/python2.7/site-packages (from -r requirements.txt (line 1))
-python sample.py
-python -m telegram
-cd 
-python -m telegram
-python -m pip install python-telegram-bot
-lss
-ls
-cd python-telegram-bot
-python -m pip install python-telegram-bot
-pip3 --version
-sudo pip3 install -r requirements.txt -U
-python sample.py
-cd telegram
-python sample.py
-sudo pip3 install -r requirements.txt -U
-from shutil import copyfile
-from telegram import python-telegram-bot
-cp
-co sample.py python-telegram-bot
-cp sample.py python-telegram-bot
-cd
-cd python-telegram-bot
-python sample.py
-vi sample.py
-cd telegram
-vi sample.py
-cp sample python-telegram-bot
-cp sample.py python-telegram-bot
-cd
-cd python-telegram-bot
-ls
-cd telegram
-vi sample.py
-python sample.py
-via /usr/bin/pip3
-cd via /usr/bin/pip3
-cd usr/bin/pip3
-cd /usr/bin/pip3
-chmod 777
-chmod --help
-chmod --recursive 777
-chmod  --help
-chmod -R 777
 chmod 
 python sample.py
 pip install python-telegram-bot
@@ -1171,4 +941,123 @@ git pull origin master
 python sample2.py
 vi sample2.py
 git push origin master
+git init
+git add .
+git commit -m "First commit"
+git push origin master
+git pull origin master
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+compute.instances.automaticRestart
+python sample2.py
+pip install cfscrape
+sudo pip install cfscrape
+pip install cfscrape
+python sample2.py
+apt-get update
+sudo apt-get update
+sudo apt-get install screen
+/init-dev.sh
+init-dev.sh
+screen
+python sample2.py
+screen -ls | grep pts | cut -d. -f1 | awk '{print $1}' | xargs kill
+screen
+python sample2.py
+screen [-d] -r [pid.]tty.host
+screen -r devshell
+screen -ls | grep pts | cut -d. -f1 | awk '{print $1}' | xargs kill
+screen
+screen -ls | grep pts | cut -d. -f1 | awk '{print $1}' | xargs kill
+screen
+python sample2.py
+vi sample2.py
+[<0;58;32m:Wq
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+wq
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+screen -r pts-1
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+screen -r pts
 git init

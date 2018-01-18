@@ -9,8 +9,17 @@ scraper = cfscrape.create_scraper()
 
 url = "https://api.telegram.org/bot468860549:AAHLj6uQeNHv-NVEhNqkqLNmpR6Q85G2Chw/"
 url1 = "https://yobit.net/api/3/trades/ltc_btc"
+url2 = "https://min-api.cryptocompare.com/data/all/exchanges"
+ccyres = scraper.get(url2).json()
+ccydata2 = json.dumps(ccyres)
+ccydata5 = json.loads(ccydata2)
+yobitccy = ccydata5['Yobit']
+ccyt = len(yobitccy) -1
+for i in ccydata5['Yobit']:
+    print (i)
 def get_yob(req):
     res1 = scraper.get("https://yobit.net/api/3/trades/ltc_btc").json()
+#    print(res1)
     data2 = json.dumps(res1)
     data5 = json.loads(data2)
     return data5
@@ -46,34 +55,42 @@ prevtype = ' '
 prevtime1n = 0
 sendstr = ' '
 for x in range(0, 999999):
-    for y in range(0,10):
- #   time.sleep(10)
+    price1=[0]
+    timeval1=[0]
+    typeval1=['']
+    time1=[0]
+    for y in range(1,3):
+    #   time.sleep(10)
         yobjson = get_yob(url1)
         price1.append(get_val(data_update(yobjson,y)))
-        print ('price' +str(y+1)+ ':'+str(price1[y]))
+        print ('price' +str(y)+ ':'+str(price1[y]))
         timeval1.append(get_time(data_update(yobjson,y)))
         time1.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y])))
         typeval1.append(get_type(data_update(yobjson,y)))
-        if y> 0:
-            if typeval1[y] == typeval1[y-1]:
-                time1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
-                prevtime1n = int(datetime.strptime(time1[y-1], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
+        if y> 1:
+            if typeval1[y] == typeval1[y-1] and typeval1[y] == 'bid':
+                print('inside bid')
+                bidflag = True
+                prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
+                time1n = int(datetime.strptime(time1[y-1], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
                 timediff = time1n - prevtime1n
-                pricediff = price1[y] - price1[y-1]
-#        print (time1n)
-#        print (prevtime1n)
+                pricediff = price1[y-1] - price1[y]
+                print (time1n)
+                print (prevtime1n)
                 print ('time diff: '+str(timediff))
                 print ('price diff:' +str(pricediff))
                 print ('Type :' + typeval1[y])
                 if timediff > 0 and pricediff > 0 :
-                    sendstr = "Price Increasing :" + "Type:" + str(typeval1) + "Price: " + str(amt1) + "Prev Price: " + str(prevamt1)
+                    sendstr = "Price Increasing :" + "Type:" + str(typeval1[y-1]) + "Price: " + str(price1[y-1]) + "Prev Price: " + str(price1[y])
                     print (sendstr)
-                    if sendstr > ' ' :
-                        print ('inside')
-                        chat_id = get_chat_id(last_update(get_updates_json(url)))
-                        str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr
-                        send_mess(chat_id, str1)       
-    print (time1)
+            else:
+                bidflag = False
+    if sendstr > ' ' and bidflag == True:
+        print ('inside')
+        chat_id = get_chat_id(last_update(get_updates_json(url)))
+        str1 = 'ltc_btc' + ':' + str(price1[y-1]) +';'+str(time1[y-1])+"status"+sendstr
+        send_mess(chat_id, str1)       
+        print (time1)
     del price1[:]
     del timeval1[:]
     del time1[:]
