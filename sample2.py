@@ -67,7 +67,7 @@ for x in range(0, 999999):
         print ('time diff: '+str(timediff))
         print ('price diff:' +str(pricediff))
         print ('Type :' + typeval1)
-#        if timediff > 0 and pricediff > 0 :
+        if timediff > 0 and pricediff > 0 :
         sendstr = "Price Increasing :" + "Type:" + str(typeval1) + "Price: " + str(amt1) + "Prev Price: " + str(prevamt1)
         print (sendstr)
         if sendstr > ' ' :
