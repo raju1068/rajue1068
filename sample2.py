@@ -45,11 +45,11 @@ def send_mess(chat, text):
 prevtype = ' '
 prevtime1n = 0
 sendstr = ' '
-price1 = [0]
-time1 = [0]
-typeval1 = [' ']
-timeval1 =['0']
 for x in range(0, 999999):
+    price1 = [0]
+    time1 = [0]
+    typeval1 = [' ']
+    timeval1 =['0']
     for y in range(0,10):
  #   time.sleep(10)
         yobjson = get_yob(url1)
