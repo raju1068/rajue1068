@@ -1067,3 +1067,43 @@ git init
 git add.
 add
 git add
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/raju1068/rajue1068
+git push origin master
+ls
+cd python-telegram-bot
+ls
+cd telegram
+git push origin master
+ls
+cd ..
+cd rajue1068
+cp sample2.py raju1068@my-project-1514214202885
+cp sample2.py
+cp sample2.py python-telegram-bot
+ls
+c 
+cd
+whoami
+cd python-telegram-bot
+cde telegram
+cd telegram
+cp sample2.py raju1068
+cd
+ls
+cd raju1068
+pwd
+cd python-telegram-bot
+cde telegram
+cd telegram
+cp sample2.py /home/raju1068
+cd
+ls
+ls sample*
+python sample2.py
+git push origin master
+git commit -m "First commit"
+git push origin master
+git commit -m "First commit"
+git init
