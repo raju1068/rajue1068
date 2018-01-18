@@ -55,8 +55,11 @@ for x in range(0, 999999):
 #        if timediff > 0 and pricediff > 0 :
         sendstr = "Price Increasing :" + "Type:" + str(typeval1) + "Price: " + str(amt1) + "Prev Price: " + str(prevamt1)
         print (sendstr)
-       
-        
+        if sendstr1 > ' ' :
+        print ('inside')
+        chat_id = get_chat_id(last_update(get_updates_json(url)))
+        str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr1
+        send_mess(chat_id, str1)       
     print (time1)
 def get_updates_json(request):  
     response = requests.get(request + 'getUpdates')
@@ -73,13 +76,6 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-def tg_msg(sendstr1):
-    print (sendstr1+'sample')
-    if sendstr1 > ' ' :
-        print ('inside')
-        chat_id = get_chat_id(last_update(get_updates_json(url)))
-        str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr1
-        send_mess(chat_id, str1)
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
