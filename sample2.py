@@ -55,10 +55,10 @@ for x in range(0, 999999):
 #        if timediff > 0 and pricediff > 0 :
         sendstr = "Price Increasing :" + "Type:" + str(typeval1) + "Price: " + str(amt1) + "Prev Price: " + str(prevamt1)
         print (sendstr)
-        if sendstr1 > ' ' :
+        if sendstr > ' ' :
             print ('inside')
             chat_id = get_chat_id(last_update(get_updates_json(url)))
-            str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr1
+            str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr
             send_mess(chat_id, str1)       
     print (time1)
 def get_updates_json(request):  
