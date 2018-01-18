@@ -46,7 +46,7 @@ prevtype = ' '
 prevtime1n = 0
 sendstr = ' '
 for x in range(0, 999999):
- #   time.sleep(10)
+    time.sleep(10)
     yobjson = get_yob(url1)
     amt1 = get_val(data_update(yobjson,0))
     print (amt1)

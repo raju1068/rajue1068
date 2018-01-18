@@ -1107,3 +1107,26 @@ git commit -m "First commit"
 git push origin master
 git commit -m "First commit"
 git init
+git add .
+git commit -m "First commit"
+git push origin master
+git pull master origin
+git pull origin master
+python sample2.py
+git pull origin master
+python sample2.py
+git pull origin master
+python sample2.py
+git pull origin master
+python sample2.py
+git pull origin master
+python sample2.py
+git pull origin master
+python sample2.py
+vi sample2.py
+python sample2.py
+git pull origin master
+python sample2.py
+vi sample2.py
+git commit -m "First commit"
+git init
