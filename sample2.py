@@ -27,6 +27,21 @@ def get_time(val1):
 def get_type(val2):
     typeval = val2['type']
     return typeval
+def get_updates_json(request):  
+    response = requests.get(request + 'getUpdates')
+    print (response)
+    return response.json()
+def last_update(data):  
+    results = data['result']
+    total_updates = len(results) - 1
+    return results[total_updates]
+def get_chat_id(update):  
+    chat_id = update['message']['chat']['id']
+    return chat_id
+def send_mess(chat, text):  
+    params = {'chat_id': chat, 'text': text}
+    response = requests.post(url + 'sendMessage', data=params)
+    return response
 prevtype = ' '
 prevtime1n = 0
 sendstr = ' '
@@ -61,21 +76,6 @@ for x in range(0, 999999):
             str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr
             send_mess(chat_id, str1)       
     print (time1)
-def get_updates_json(request):  
-    response = requests.get(request + 'getUpdates')
-    print (response)
-    return response.json()
-def last_update(data):  
-    results = data['result']
-    total_updates = len(results) - 1
-    return results[total_updates]
-def get_chat_id(update):  
-    chat_id = update['message']['chat']['id']
-    return chat_id
-def send_mess(chat, text):  
-    params = {'chat_id': chat, 'text': text}
-    response = requests.post(url + 'sendMessage', data=params)
-    return response
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
