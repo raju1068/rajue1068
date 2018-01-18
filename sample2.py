@@ -45,15 +45,19 @@ def send_mess(chat, text):
 prevtype = ' '
 prevtime1n = 0
 sendstr = ' '
+price1 = [0]
+time1 = [0]
+typeval1 = [' ']
+timeval1 =['0']
 for x in range(0, 999999):
-    for y in range(0,10)
+    for y in range(0,10):
  #   time.sleep(10)
         yobjson = get_yob(url1)
-        price1[y+1] = get_val(data_update(yobjson,y))
-        print ('price' +str(y+1)+ ':'+price1[y+1])
-        timeval1[y+1] = get_time(data_update(yobjson,y))
-        time1[y+1] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y+1]))
-        typeval1[y+1] = get_type(data_update(yobjson,y))
+        price1.append(get_val(data_update(yobjson,y)))
+        print ('price' +str(y+1)+ ':'+str(price1[y+1]))
+        timeval1.append(get_time(data_update(yobjson,y)))
+        time1.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y+1])))
+        typeval1.append(get_type(data_update(yobjson,y)))
         if typeval1[y+1] == typeval1[y]:
             time1n = int(datetime.strptime(time1[y+1], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
             prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
@@ -63,7 +67,7 @@ for x in range(0, 999999):
 #        print (prevtime1n)
             print ('time diff: '+str(timediff))
             print ('price diff:' +str(pricediff))
-            print ('Type :' + typeval1)
+            print ('Type :' + typeval1[y+1])
             if timediff > 0 and pricediff > 0 :
                 sendstr = "Price Increasing :" + "Type:" + str(typeval1) + "Price: " + str(amt1) + "Prev Price: " + str(prevamt1)
                 print (sendstr)
@@ -73,6 +77,10 @@ for x in range(0, 999999):
                     str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr
                     send_mess(chat_id, str1)       
     print (time1)
+    del price1[:]
+    del timeval1[:]
+    del time1[:]
+    del typeval1[:]
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
