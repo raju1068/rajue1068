@@ -46,6 +46,7 @@ prevtype = ' '
 prevtime1n = 0
 sendstr = ' '
 for x in range(0, 999999):
+<<<<<<< HEAD
     time.sleep(10)
     yobjson = get_yob(url1)
     amt1 = get_val(data_update(yobjson,0))
@@ -62,19 +63,34 @@ for x in range(0, 999999):
         prevtime1n = int(datetime.strptime(prevtime1, "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
         timediff = time1n - prevtime1n
         pricediff = amt1 - prevamt1
+=======
+    for y in range(0,10)
+ #   time.sleep(10)
+        yobjson = get_yob(url1)
+        price1[y+1] = get_val(data_update(yobjson,y))
+        print ('price' +str(y+1)+ ':'+price1[y+1])
+        timeval1[y+1] = get_time(data_update(yobjson,y))
+        time1[y+1] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y+1]))
+        typeval1[y+1] = get_type(data_update(yobjson,y))
+        if typeval1[y+1] == typeval1[y]:
+            time1n = int(datetime.strptime(time1[y+1], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
+            prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
+            timediff = time1n - prevtime1n
+            pricediff = price1[y+1] - price1[y]
+>>>>>>> de15bcad94d4723851a366a71eb823ff880f8152
 #        print (time1n)
 #        print (prevtime1n)
-        print ('time diff: '+str(timediff))
-        print ('price diff:' +str(pricediff))
-        print ('Type :' + typeval1)
-        if timediff > 0 and pricediff > 0 :
-            sendstr = "Price Increasing :" + "Type:" + str(typeval1) + "Price: " + str(amt1) + "Prev Price: " + str(prevamt1)
-            print (sendstr)
-            if sendstr > ' ' :
-                print ('inside')
-                chat_id = get_chat_id(last_update(get_updates_json(url)))
-                str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr
-                send_mess(chat_id, str1)       
+            print ('time diff: '+str(timediff))
+            print ('price diff:' +str(pricediff))
+            print ('Type :' + typeval1)
+            if timediff > 0 and pricediff > 0 :
+                sendstr = "Price Increasing :" + "Type:" + str(typeval1) + "Price: " + str(amt1) + "Prev Price: " + str(prevamt1)
+                print (sendstr)
+                if sendstr > ' ' :
+                    print ('inside')
+                    chat_id = get_chat_id(last_update(get_updates_json(url)))
+                    str1 = 'ltc_btc' + ':' + str(amt1) +';'+str(time1)+"status"+sendstr
+                    send_mess(chat_id, str1)       
     print (time1)
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']

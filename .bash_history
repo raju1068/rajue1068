@@ -1130,3 +1130,12 @@ python sample2.py
 vi sample2.py
 git commit -m "First commit"
 git init
+git add .
+git pull origin master
+git commit -m "First commit"
+git pull origin master
+git commit -m "First commit"
+git init
+git add .
+git push origin master
+git init
