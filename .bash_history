@@ -1164,3 +1164,11 @@ python sample2.py
 vi sample2.py
 git commit -m "First commit"
 git init
+git add .
+git commit -m "First commit"
+git push origin master
+git pull origin master
+python sample2.py
+vi sample2.py
+git push origin master
+git init
