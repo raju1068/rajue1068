@@ -10,13 +10,16 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~Msle0~/\<time\>
+
 # Command Line History (newest to oldest):
 :wq
-|2,0,1516119125,,"wq"
+|2,0,1516291112,,"wq"
+:q
+|2,0,1516129539,,"q"
 :wq1
 |2,0,1516042598,,"wq1"
-:q
-|2,0,1516040831,,"q"
 :wq!
 |2,0,1516039116,,"wq!"
 :q!
@@ -25,6 +28,10 @@
 |2,0,1516037890,,".wq!"
 
 # Search String History (newest to oldest):
+? \<time\>
+|2,1,1516288378,,"\\<time\\>"
+? \<print\>
+|2,1,1516212657,,"\\<print\\>"
 
 # Expression History (newest to oldest):
 
@@ -34,263 +41,412 @@
 
 # Registers:
 ""-	CHAR	0
-	E
-|3,1,36,0,1,0,1516042903,"E"
+	)
+|3,1,36,0,1,0,1516290910,")"
 
 # File marks:
-'0  1  0  ~/__init__.py
-|4,48,1,0,1516119125,"~/__init__.py"
-'1  1  20  ~/Procfile.windows
-|4,49,1,20,1516119104,"~/Procfile.windows"
-'2  1  0  ~/python-telegram-bot/cryptosara.py
-|4,50,1,0,1516043650,"~/python-telegram-bot/cryptosara.py"
-'3  1  0  ~/python-telegram-bot/cryptosara.py
-|4,51,1,0,1516043464,"~/python-telegram-bot/cryptosara.py"
-'4  9  71  ~/python-telegram-bot/hello.py
-|4,52,9,71,1516042909,"~/python-telegram-bot/hello.py"
-'5  15  0  ~/python-telegram-bot/hello.py
-|4,53,15,0,1516042860,"~/python-telegram-bot/hello.py"
-'6  15  0  ~/python-telegram-bot/hello.py
-|4,54,15,0,1516042860,"~/python-telegram-bot/hello.py"
-'7  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,55,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
-'8  10  40  ~/python-telegram-bot/telegram/sample.py
-|4,56,10,40,1516042388,"~/python-telegram-bot/telegram/sample.py"
-'9  10  40  ~/python-telegram-bot/telegram/sample.py
-|4,57,10,40,1516042388,"~/python-telegram-bot/telegram/sample.py"
+'0  78  4  ~/python-telegram-bot/telegram/sample2.py
+|4,48,78,4,1516291113,"~/python-telegram-bot/telegram/sample2.py"
+'1  59  7  ~/python-telegram-bot/telegram/sample2.py
+|4,49,59,7,1516290490,"~/python-telegram-bot/telegram/sample2.py"
+'2  59  7  ~/python-telegram-bot/telegram/sample2.py
+|4,50,59,7,1516290490,"~/python-telegram-bot/telegram/sample2.py"
+'3  59  17  ~/python-telegram-bot/telegram/sample2.py
+|4,51,59,17,1516289524,"~/python-telegram-bot/telegram/sample2.py"
+'4  59  17  ~/python-telegram-bot/telegram/sample2.py
+|4,52,59,17,1516289524,"~/python-telegram-bot/telegram/sample2.py"
+'5  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,53,58,18,1516289494,"~/python-telegram-bot/telegram/sample2.py"
+'6  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,54,58,18,1516289494,"~/python-telegram-bot/telegram/sample2.py"
+'7  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,55,58,18,1516289494,"~/python-telegram-bot/telegram/sample2.py"
+'8  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,56,58,18,1516289494,"~/python-telegram-bot/telegram/sample2.py"
+'9  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,57,58,18,1516289494,"~/python-telegram-bot/telegram/sample2.py"
 
 # Jumplist (newest first):
--'  1  0  ~/__init__.py
-|4,39,1,0,1516119125,"~/__init__.py"
--'  1  20  ~/Procfile.windows
-|4,39,1,20,1516119104,"~/Procfile.windows"
--'  1  20  ~/Procfile.windows
-|4,39,1,20,1516119104,"~/Procfile.windows"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043650,"~/python-telegram-bot/cryptosara.py"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043650,"~/python-telegram-bot/cryptosara.py"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043650,"~/python-telegram-bot/cryptosara.py"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043650,"~/python-telegram-bot/cryptosara.py"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043464,"~/python-telegram-bot/cryptosara.py"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043464,"~/python-telegram-bot/cryptosara.py"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043464,"~/python-telegram-bot/cryptosara.py"
--'  1  0  ~/python-telegram-bot/cryptosara.py
-|4,39,1,0,1516043464,"~/python-telegram-bot/cryptosara.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  9  71  ~/python-telegram-bot/hello.py
-|4,39,9,71,1516042909,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042889,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  15  0  ~/python-telegram-bot/hello.py
-|4,39,15,0,1516042860,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  1  0  ~/python-telegram-bot/hello.py
-|4,39,1,0,1516042851,"~/python-telegram-bot/hello.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
--'  14  43  ~/python-telegram-bot/telegram/sample.py
-|4,39,14,43,1516042603,"~/python-telegram-bot/telegram/sample.py"
+-'  78  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,78,4,1516291113,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,7,1516290604,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,7,1516290490,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  17  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,17,1516289524,"~/python-telegram-bot/telegram/sample2.py"
+-'  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,39,58,18,1516289506,"~/python-telegram-bot/telegram/sample2.py"
+-'  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,39,58,18,1516289506,"~/python-telegram-bot/telegram/sample2.py"
+-'  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,39,58,18,1516289506,"~/python-telegram-bot/telegram/sample2.py"
+-'  58  18  ~/python-telegram-bot/telegram/sample2.py
+|4,39,58,18,1516289494,"~/python-telegram-bot/telegram/sample2.py"
+-'  82  8  ~/python-telegram-bot/telegram/sample2.py
+|4,39,82,8,1516288817,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  8  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,8,1516288817,"~/python-telegram-bot/telegram/sample2.py"
+-'  82  8  ~/python-telegram-bot/telegram/sample2.py
+|4,39,82,8,1516288817,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  8  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,8,1516288817,"~/python-telegram-bot/telegram/sample2.py"
+-'  82  8  ~/python-telegram-bot/telegram/sample2.py
+|4,39,82,8,1516288817,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  8  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,8,1516288817,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  8  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,8,1516288611,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  75  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,75,1516288609,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  75  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,75,1516288609,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  75  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,75,1516288609,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  75  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,75,1516288609,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  75  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,75,1516288609,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  75  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,75,1516288569,"~/python-telegram-bot/telegram/sample2.py"
+-'  35  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,35,4,1516288528,"~/python-telegram-bot/telegram/sample2.py"
+-'  35  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,35,4,1516288528,"~/python-telegram-bot/telegram/sample2.py"
+-'  35  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,35,4,1516288528,"~/python-telegram-bot/telegram/sample2.py"
+-'  35  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,35,4,1516288528,"~/python-telegram-bot/telegram/sample2.py"
+-'  35  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,35,4,1516288528,"~/python-telegram-bot/telegram/sample2.py"
+-'  35  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,35,4,1516288528,"~/python-telegram-bot/telegram/sample2.py"
+-'  35  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,35,4,1516288411,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288407,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288407,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288407,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288407,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288407,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288407,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288407,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  1  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,1,1516288392,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  16  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,16,1516288292,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  16  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,16,1516288234,"~/python-telegram-bot/telegram/sample2.py"
+-'  60  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,60,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  60  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,60,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  60  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,60,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288217,"~/python-telegram-bot/telegram/sample2.py"
+-'  59  4  ~/python-telegram-bot/telegram/sample2.py
+|4,39,59,4,1516288035,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,7,1516287995,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,7,1516287995,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,7,1516287995,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,7,1516287995,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,7,1516287995,"~/python-telegram-bot/telegram/sample2.py"
+-'  81  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,81,7,1516287995,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,7,1516287990,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,7,1516287990,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,7,1516287990,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,7,1516287990,"~/python-telegram-bot/telegram/sample2.py"
+-'  80  7  ~/python-telegram-bot/telegram/sample2.py
+|4,39,80,7,1516287990,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,15,1516287754,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,15,1516287754,"~/python-telegram-bot/telegram/sample2.py"
+-'  34  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,34,15,1516287751,"~/python-telegram-bot/telegram/sample2.py"
+-'  77  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,77,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  77  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,77,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  77  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,77,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  76  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,76,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  75  19  ~/python-telegram-bot/telegram/sample2.py
+|4,39,75,19,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287728,"~/python-telegram-bot/telegram/sample2.py"
+-'  74  15  ~/python-telegram-bot/telegram/sample2.py
+|4,39,74,15,1516287651,"~/python-telegram-bot/telegram/sample2.py"
 
 # History of marks within files (newest to oldest):
 
-> ~/__init__.py
-	*	1516119125	0
+> ~/python-telegram-bot/telegram/sample2.py
+	*	1516291112	0
+	"	78	4
+	^	59	8
+	.	59	7
+	+	38	0
+	+	39	4
+	+	40	4
+	+	45	28
+	+	46	8
+	+	47	8
+	+	48	8
+	+	55	8
+	+	56	0
+	+	57	12
+	+	57	27
+	+	60	0
+	+	60	4
+	+	57	27
+	+	60	0
+	+	60	4
+	+	57	10
+	+	56	123
+	+	80	8
+	+	81	75
+	+	57	17
+	+	33	0
+	+	32	12
+	+	34	17
+	+	52	23
+	+	51	25
+	+	57	30
+	+	60	3
+	+	60	7
+	+	17	25
+	+	18	30
+	+	36	41
+	+	38	44
+	+	40	44
+	+	18	27
+	+	17	21
+	+	36	38
+	+	38	43
+	+	40	43
+	+	34	16
+	+	18	25
+	+	20	17
+	+	17	24
+	+	36	39
+	+	38	44
+	+	40	47
+	+	42	79
+	+	41	50
+	+	44	46
+	+	60	4
+	+	61	0
+	+	56	123
+	+	49	34
+	+	55	42
+	+	34	16
+	+	33	27
+	+	34	15
+	+	80	11
+	+	81	11
+	+	82	11
+	+	33	23
+	+	50	0
+	+	51	0
+	+	52	33
+	+	60	0
+	+	53	39
+	+	52	42
+	+	53	43
+	+	60	0
+	+	54	34
+	+	34	16
+	+	78	15
+	+	77	18
+	+	79	27
+	+	77	19
+	+	34	16
+	+	75	19
+	+	77	28
+	+	79	8
+	+	79	24
+	+	80	65
+	+	81	75
+	+	82	8
+	+	60	0
+	+	58	19
+	+	34	1
+	+	58	26
+	+	76	18
+	+	77	18
+	+	78	14
+	+	81	75
+	+	58	25
+	+	59	17
+	+	55	44
+	+	56	8
+	+	57	8
+	+	58	8
+	+	59	8
+	+	58	6
+	+	59	7
+	e	25	19
+
+> ~/python-telegram-bot/rajue1068/telebt1.py
+	*	1516207792	0
+	"	99	86
+	^	79	44
+	.	79	43
+	+	9	40
+	+	10	40
+	+	79	43
+
+> ~/python-telegram-bot/rajue1068/telebt.py
+	*	1516134076	0
+	"	95	33
+	^	95	34
+	.	91	85
+	+	9	40
+	+	10	39
+	+	14	18
+	+	16	61
+	+	8	0
+	+	11	19
+	+	67	5
+	+	78	35
+	+	67	32
+	+	89	32
+	+	186	38
+	+	215	20
+	+	236	16
+	+	237	42
+	+	222	20
+	+	223	26
+	+	91	0
+	+	95	32
+	+	89	8
+	+	95	8
+	+	97	12
+	+	92	21
+	+	93	28
+	+	90	28
+	+	91	73
+	+	92	22
+	+	97	12
+	+	91	87
+	+	91	85
+
+> ~/python-telegram-bot/rajue1068/telebi.py
+	*	1516129538	0
 	"	1	0
 
-> ~/Procfile.windows
-	*	1516119103	0
-	"	1	20
-	^	1	21
-	.	1	0
-	+	1	0
+> ~/python-telegram-bot/rajue1068/telepl.py
+	*	1516129529	0
+	"	247	0
+	^	25	16
+	.	25	16
+	+	22	19
+	+	25	16
 
-> ~/python-telegram-bot/cryptosara.py
-	*	1516043649	0
-	"	1	0
-
-> ~/python-telegram-bot/hello.py
-	*	1516042908	0
-	"	9	71
-	^	9	72
-	.	9	71
-	+	15	0
-	+	9	71
+> ~/python-telegram-bot/telegram/sample1.py
+	*	1516127978	0
+	"	1	13
+	^	1	14
+	.	33	0
+	+	3	80
+	+	19	26
+	+	33	0
 
 > ~/python-telegram-bot/telegram/sample.py
-	*	1516042601	0
-	"	14	43
-	^	10	41
-	.	14	42
+	*	1516127708	0
+	"	1	0
+	^	7	5
+	.	7	5
 	+	1	77
 	+	69	101
 	+	1	77
@@ -380,17 +536,86 @@
 	+	62	0
 	+	9	64
 	+	14	42
+	+	9	21
+	+	6	5
+	+	7	5
+
+> ~/python-telegram-bot/rajue1068/telegram_kraken_bot.py
+	*	1516124891	0
+	"	2	22
+	^	2	23
+	.	3	0
+	+	3	0
+
+> ~/python-telegram-bot/rajue1068/config.json
+	*	1516124792	0
+	"	2	26
+	^	2	27
+	.	2	26
+	+	2	25
+	+	3	65
+	+	2	26
+
+> ~/python-telegram-bot/telegram/sara_bot.py
+	*	1516123601	0
+	"	1	36
+	^	1	37
+	.	47	262
+	+	47	262
+
+> ~/python-telegram-bot/telegram/ext/dispatcher.py
+	*	1516123021	0
+	"	30	0
+	^	30	0
+	.	29	33
+	+	29	33
+
+> ~/python-telegram-bot/telegram/ext/queue/Queue.py
+	*	1516122813	0
+	"	1	0
+
+> ~/python-telegram-bot/telegram/ext/queue.py
+	*	1516122756	0
+	"	1	0
+
+> ~/python-telegram-bot/telegram/queue.py
+	*	1516122742	0
+	"	1	0
+
+> ~/python-telegram-bot/telegram/ext/queue/queue.py
+	*	1516122699	0
+	"	1	0
+
+> ~/python-telegram-bot/telegram/forcereply.py
+	*	1516120485	0
+	"	1	0
+
+> ~/__init__.py
+	*	1516119125	0
+	"	1	0
+
+> ~/Procfile.windows
+	*	1516119103	0
+	"	1	20
+	^	1	21
+	.	1	0
+	+	1	0
+
+> ~/python-telegram-bot/cryptosara.py
+	*	1516043649	0
+	"	1	0
+
+> ~/python-telegram-bot/hello.py
+	*	1516042908	0
+	"	9	71
+	^	9	72
+	.	9	71
+	+	15	0
+	+	9	71
 
 > ~/python-telegram-bot/sample.py
 	*	1516040828	0
 	"	1	0
-
-> ~/python-telegram-bot/telegram/sara_bot.py
-	*	1516037985	0
-	"	40	30
-	^	40	31
-	.	47	262
-	+	47	262
 
 > ~/python-telegram-bot/telegram/test.py
 	*	1516037955	0
