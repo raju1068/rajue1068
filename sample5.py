@@ -36,7 +36,7 @@ def get_yob(req):
                 data5 = json.loads(data2)
                 return data5
             except ValueError as err:
-                print ('Req ID ' + req + ' Decode JSON invalid')               
+                print ('Req ID ' + req + ' Decode JSON invalid'+ str(err))               
                 break
             except AttributeError as err1:
                 print ('Req ID ' + req + 'Decode JSON invalid')            
@@ -100,19 +100,26 @@ def send_mess(chat, text):
     response = requests.post(url + 'sendMessage', data=params)
     return response
 #        time.sleep(1)
-def ccy_data(yobson,ccy2):
+print (time.time()-500)
+def ccy_data(yobjson,ccy2):
+    sendstr = ' '
+    bidflag = True
+    print (ccy2)
     for y in range(1,10):
         price1.append(get_val(data_update(yobjson,y,ccy2)))
-        print ('price' +str(y)+ ':'+str(price1[y]))
+#        print ('price' +str(y)+ ':'+str(price1[y]))
         timeval1.append(get_time(data_update(yobjson,y,ccy2)))
         time1.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y])))
         typeval1.append(get_type(data_update(yobjson,y,ccy2)))
-        if y> 1:
-            if typeval1[y] == typeval1[y-1] and typeval1[y] == 'bid':
+#        print (timeval1[y-1])
+#        print (time.time()-500)
+        if y> 1 and timeval1[y-1]>(time.time()-500):
+            if typeval1[y] == typeval1[y-1] and typeval1[y] == 'bid'and bidflag == True:
+                bidflag = True
                 print('inside bid')
                 bidflag = True
-                prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
-                time1n = int(datetime.strptime(time1[y-1], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
+                prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))
+                time1n = int(datetime.strptime(time1[y-1], "%Y-%m-%d %H:%M:%S").strftime('%s'))
                 timediff = time1n - prevtime1n
                 pricediff = price1[y-1] - price1[y]
                 print (time1n)
@@ -120,11 +127,13 @@ def ccy_data(yobson,ccy2):
                 print ('time diff: '+str(timediff))
                 print ('price diff:' +str(pricediff))
                 print ('Type :' + typeval1[y])
-                if timediff > 0 and pricediff > 0 :
+                if timediff > 0 and timediff < 30000 and pricediff > 0 :
+                    global sendstr
                     sendstr = ccy2+":price Increasing :" + "Type:" + str(typeval1[y-1]) + "Price: " + str(price1[y-1]) + "Prev Price: " + str(price1[y])
                     print (sendstr)
             else:
                 bidflag = False
+    global sendstr
     if sendstr > ' ' and bidflag == True:
         print ('inside')
         chat_id = get_chat_id(last_update(get_updates_json(url)))
@@ -146,7 +155,8 @@ for x in range(0, ccyt):
     yobjson1 = get_yob(url1[x+1])
     global ccy
     ccy21 = ccy[x+1]+'_btc'
-    t = threading.Thread(target=ccy_fun, args=(yobson1,ccy21))
+    time.sleep(1)
+    t = threading.Thread(target=ccy_data, args=(yobjson1,ccy21))
     t.setDaemon(True)
     t.start()
 def main():  

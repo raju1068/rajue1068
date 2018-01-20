@@ -1,155 +1,3 @@
-pip install virtualenv
-source bin/activate
-source activate
-pip freeze > requirements.txt
-vi Procfile.windows
-vi __init__.py 
-git init
-git add .
-git commit -m ‘short message that describe changes to commit’
-git commit -m ‘sample'
-git push -u https://github.com/raju1068/rajue1068
-
-quit
-
-
-
-cd
-.wq
-
-
-
-
-
-cls
-cd 
-ls
-quit
-
-
-
-
-
-
-‘sample'
-git push -u https://github.com/raju1068/rajue1068
-quit
-cd
-.wq
-cls
-cd 
-ls
-quit
-q
-git push -u https://github.com/raju1068/rajue1068
-sudo add-apt-repository "deb 
-https://cliassets.heroku.com/branches/stable/apt ./"
-sudo add-apt-repository
-git init
-git add .
-git commit -m ‘sample' ./
-./
-.
-.
-\
-.q
-,z
-.z
-.
-.wq
-.zx
-./
-
-
-
-
-
-
-?
-hrlp
-hrlp
-help
-q
-w
-
-`
-./
-./
-.\
-\
-/
-;
-'
-it config --global user.email "raju1068@gmail.com"
-git config --global user.email "raju1068@gmail.com"
-git config --global user.name "raju"
-git push -u https://github.com/raju1068/rajue1068
-git push --set-upstream https://github.com/raju1068/rajue1068 master
-git push origin HEAD:master
-git push --set-upstream https://github.com/raju1068/rajue1068
-git push --set-upstream https://github.com/raju1068/rajue1068 master
-git remote add upstream
-git push --set-upstream https://github.com/raju1068/rajue1068 master
-git show-ref
-heroku login
-wget -O nodejs.tar.gz http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-x64.tar.gzwget -O nodejs.tar.gz http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-x64.tar.gzls
-ls
-cd python-telegram-bot
-ls
-ls tests
-cd tests
-ls
-python test_inlinequeryresultgif.py
-cd
-ls
-cd python-telegram-bot
-ls
-cd telegram
-ls
-vi forcereply.py 
-vi sara_bot.py 
-vi sample.py
-python sample.py
-cd
-ls telegram.ext
-cd python-telegram-bot/telegram
-lscd
-cd
-ls
-cd 
-cd python-telegram-bot
-ls
-source my_en
-source my_env/bin/activate
-python sample.py
-cd telegram 
-python sample.py
-vi sample1.py
-python sample1.py
-cd
-cd python-telegram-bot
-ls
-ls req*
-cd
-ls req*
-cd python-telegram-bot
-cd telegram
-pip install requests
-python sample1.py
-ls
-python sample1.py
-vi sample.py
-pip install telegram.ext
-cd
-pip install telegram.ext
-cd python-telegram-bot
-cd telegram
-ls
-cd ext
-ls
-cd
-cd python-telegram-bot
-cd telegram
 vi sample.py
 python sample.py
 cd ext
@@ -1123,6 +971,74 @@ git init
 git add .
 git commit -m "First commit"
 git pull origin master
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+git init
+git add .
+git commit -m "First commit"
+git push origin master
+git pull origin master
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+pip install cfscrape
+sudo install cfscrape
+sudo pip install cfscrape
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+import time
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
 python sample5.py
 vi sample5.py
 python sample5.py
