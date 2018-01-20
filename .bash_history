@@ -1104,3 +1104,19 @@ git init
 git add .
 git commit -m "First commit"
 git init
+git add .
+git commit -m "First commit"
+git push origin master
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+cp sample5 sample9
+cp sample5.py sample9.py
+git pull oirgin master
+git pull origin master
+python sample5.py
+vi sample5.py
+git pull origin master
+git init
