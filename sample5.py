@@ -25,7 +25,6 @@ for i in ccydata5['Yobit']:
     url1.append("https://yobit.net/api/3/trades/" +i.lower()+ "_btc")
     global ccy
     ccy.append(i.lower())
-
 def get_yob(req):
     print (req)
     start_time = time.time()
