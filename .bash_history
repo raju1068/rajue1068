@@ -1023,3 +1023,13 @@ vi sample2.py
 python sample2.py
 vi sample2.py
 git init
+git add .
+git commit -m "First commit"
+git push origin master
+git remote add origin remote https://github.com/raju1068/rajue1068
+git remote -v
+git push origin master
+cp sample2.py sample5.py
+ls
+git push origin master
+git init
