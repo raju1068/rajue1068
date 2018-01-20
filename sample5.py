@@ -99,13 +99,9 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-def ccy_fun(x1):
-    yobjson = get_yob(url1[x1+1])
-    global ccy
-    ccy2 = ccy[x1+1]+'_btc'
-    for y in range(1,10):
 #        time.sleep(1)
-def ccy_data():
+def ccy_data(yobson,ccy2):
+    for y in range(1,10):
         price1.append(get_val(data_update(yobjson,y,ccy2)))
         print ('price' +str(y)+ ':'+str(price1[y]))
         timeval1.append(get_time(data_update(yobjson,y,ccy2)))
@@ -147,7 +143,12 @@ for x in range(0, ccyt):
     timeval1=[0]
     typeval1=['']
     time1=[0]
-    ccy_fun()
+    yobjson1 = get_yob(url1[x+1])
+    global ccy
+    ccy21 = ccy[x+1]+'_btc'
+    t = threading.Thread(target=ccy_fun, args=(yobson1,ccy21))
+    t.setDaemon(True)
+    t.start()
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
