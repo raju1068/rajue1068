@@ -1,95 +1,3 @@
-chmod 
-python sample.py
-pip install python-telegram-bot
-pip install telegram
-chmod 
-sudo chown -R $USER /usr/local/lib/python2.7
-pip install telegram
-pip install python-telegram-bot
-pip install requirements
-python sample.py
-vi sample.py
-python sample.py
-vi sample.py
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-cd
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-python setup.py install
-cd python-telegram-bot
-python setup.py install
-sudo chown -R $USER /usr/local/bin/pasteurize
-python setup.py install
-sudo chown -R $USER /usr/local/bin
-python setup.py install
-python sample.py
-cd telegram
-python sample.py
-cd python-telegram-bot
-cd 
-cd python-telegram-bot
-vi hello.py
-python hello.py
-vi hello.py
-python hello.py
-ren
-rem
-rename
-renam
-rename hello.py cryptosara.py
-mv
-mv hello.py cryptosara.py
-vi cryptosara.py
-python cryptosara.py
-pip install python-telegram-bot
-python cryptosara.py
-vi cryptosara.py
-mv cryptosara cryptosara_bot
-mv cryptosara.py cryptosara_bot.py
-python cryptosara_bot
-python cryptosara_bot.py
-sudo apt-get install git-all
-$ pip install virtualenv
-cd 
-$ pip install virtualenv
-cd python-telegram-bot
-pip install virtualenv
-$ virtualenv my_env  
-virtualenv my_env  
-pip install requests
-python cryptosara_bot.py
-git init
-python cryptosara_bot.py
-git clone https://github.com/raju1068/rajue1068
-source bin/activate
-scripts\activate.bat
-source
-cd
-source bin/activate
-source bin
-cd source bin/activate
-git push -u https://github.com/yourusername/nameofrepo
-cd python-telegram-bot
-git push -u https://github.com/yourusername/nameofrepo
-git push -u https://github.com/raju1068/raju1068
-git push -u https://github.com/raju1068/rajue1068
-hi
-sudo apt-get install python-pip
-python get-pip.py
-ls
-pip install requests
-python-telegram-bot  README-cloudshell.txt
-raju1068@my-project-1514214202885:~$ pip install requests
-Requirement already satisfied: requests in /usr/local/lib/python2.7/dist-packages
-Requirement already satisfied: urllib3<1.23,>=1.21.1 in /usr/l
-python-telegram-bot  README-cloudshell.txt
-raju1068@my-project-1514214202885:~$ pip install requests
-Requirement already satisfied: requests in /usr/local/lib/python2.7/dist-packages
-Requirement already satisfied: urllib3<1.23,>=1.21.1 in /usr/l
-python-telegram-bot  README-cloudshell.txt
-raju1068@my-project-1514214202885:~$ pip install requests
-Requirement already satisfied: requests in /usr/local/lib/python2.7/dist-packages
-Requirement already satisfied: urllib3<1.23,>=1.21.1 in /usr/lsudo apt-get install git-all
-sudo apt-get install git-all
 pip install virtualenv
 source bin/activate
 source activate
@@ -1060,4 +968,58 @@ vi sample2.py
 python sample2.py
 vi sample2.py
 screen -r pts
+git init
+git add .
+git commit -m "First commit"
+git push origin master
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+screen -r pts
+python sample2.py
+ls
+cd python-telegram-bot
+ls
+my_env       
+cd my_env       
+source bin/activate
+cd
+cd python-telegram-bot
+cd rajue1068                     
+ls
+cd
+ls
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
+python sample2.py
+vi sample2.py
 git init
