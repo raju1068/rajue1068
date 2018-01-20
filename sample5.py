@@ -25,7 +25,6 @@ for i in ccydata5['Yobit']:
     url1.append("https://yobit.net/api/3/trades/" +i.lower()+ "_btc")
     global ccy
     ccy.append(i.lower())
-
 def get_yob(req):
     print (req)
     start_time = time.time()
@@ -100,23 +99,13 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-prevtype = ' '
-prevtime1n = 0
-sendstr = ' '
-for x in range(0, ccyt):
-    price1=[0]
-    timeval1=[0]
-    typeval1=['']
-    time1=[0]
-    t = threading.Thread(target=ccy_fun)
-    t.setDaemon(True)
-    t.start()
-def ccy_fun():
+def ccy_fun(x1):
+    yobjson = get_yob(url1[x1+1])
+    global ccy
+    ccy2 = ccy[x1+1]+'_btc'
     for y in range(1,10):
-    #   time.sleep(10)
-        yobjson = get_yob(url1[x+1])
-        global ccy
-        ccy2 = ccy[x+1]+ '_btc'
+#        time.sleep(1)
+def ccy_data():
         price1.append(get_val(data_update(yobjson,y,ccy2)))
         print ('price' +str(y)+ ':'+str(price1[y]))
         timeval1.append(get_time(data_update(yobjson,y,ccy2)))
@@ -150,6 +139,15 @@ def ccy_fun():
     del timeval1[:]
     del time1[:]
     del typeval1[:]
+prevtype = ' '
+prevtime1n = 0
+sendstr = ' '
+for x in range(0, ccyt):
+    price1=[0]
+    timeval1=[0]
+    typeval1=['']
+    time1=[0]
+    ccy_fun()
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
