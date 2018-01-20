@@ -1101,3 +1101,6 @@ vi sample5.py
 python sample5.py
 vi sample5.py
 git init
+git add .
+git commit -m "First commit"
+git init
