@@ -1047,3 +1047,57 @@ git push origin master
 git pull origin master
 git commit -m "First commit"
 git init
+git add .
+git commit -m "First commit"
+git push origin master
+vi sample2.py
+python sample2.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+pip3 install dRep
+pip install dRep
+pip install pyenv
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+wq
+vi sample5.py
+wq
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+git init

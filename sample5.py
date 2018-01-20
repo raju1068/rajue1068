@@ -4,6 +4,7 @@ import json
 import time
 import datetime
 import os
+import threading
 from requests import ConnectionError
 from datetime import datetime
 scraper = cfscrape.create_scraper() 
@@ -30,14 +31,17 @@ def get_yob(req):
     start_time = time.time()
     while True:
         try:
-            res1 = scraper.get(req).json()
+            res1 = scraper.get(req)
             try:
-                data2 = json.dumps(res1)
+                data2 = json.dumps(res1.json())
                 data5 = json.loads(data2)
-            except ValueError:
-                pass
-            return data5
-            break
+                return data5
+            except ValueError as err:
+                print ('Req ID ' + req + ' Decode JSON invalid')               
+                break
+            except AttributeError as err1:
+                print ('Req ID ' + req + 'Decode JSON invalid')            
+                break
         except ConnectionError:
             if time.time() > start_time + connection_timeout:
                 raise Exception('Unable to get updates after {} seconds of ConnectionErrors'.format(connection_timeout))
@@ -49,18 +53,38 @@ def get_yob(req):
 #    data5 = json.loads(data2)
 #    return data5
 def data_update(data1,ind,ccy1):
-    res = data1[ccy1]
-    tot = len(res) -1
-    return res[ind]
+    while True:
+        try:
+            res = data1[ccy1]
+            tot = len(res) -1
+            return res[ind]
+        except TypeError as terr:
+            print (terr)
+            break
 def get_val(val):
-    amt = val['price']
-    return amt
+    while True:
+        try:
+            amt = val['price']
+            return amt
+        except TypeError as verr:
+            print (verr)
+            break
 def get_time(val1):
-    timeval = val1['timestamp']
-    return timeval
+    while True:
+        try:
+            timeval = val1['timestamp']
+            return timeval
+        except TypeError as terr1:
+            print (terr1)
+            break
 def get_type(val2):
-    typeval = val2['type']
-    return typeval
+    while True:
+        try:
+            typeval = val2['type']
+            return typeval
+        except TypeError as terr2:
+            print (terr2)
+            break
 def get_updates_json(request):  
     response = requests.get(request + 'getUpdates')
     print (response)

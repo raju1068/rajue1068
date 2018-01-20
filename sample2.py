@@ -39,8 +39,9 @@ def get_yob(req):
             try:
                 data2 = json.dumps(res1)
                 data5 = json.loads(data2)
-            except ValueError:
-                pass
+            except(json.decoder.JSONDecodeError,ValueError):
+                print 'Question ID ' + questionId + ' Decode JSON has failed'
+                logging.info("This qid didn't work " + questionId
             return data5
             break
         except ConnectionError:
