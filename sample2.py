@@ -1,4 +1,4 @@
-import requests
+import requests 
 import cfscrape
 import json
 import time
@@ -10,7 +10,11 @@ scraper = cfscrape.create_scraper()
 # print scraper.get("https://yobit.net/api/3/trades/ltc_btc").content
 
 url = "https://api.telegram.org/bot468860549:AAHLj6uQeNHv-NVEhNqkqLNmpR6Q85G2Chw/"
+<<<<<<< HEAD
 url1 = ["https://yobit.net/api/3/trades/ltc_btc"]
+=======
+url1 = ""
+>>>>>>> e143fe9d549cf93da81eaf2485794e189035824b
 url2 = "https://min-api.cryptocompare.com/data/all/exchanges"
 ccyres = scraper.get(url2).json()
 ccydata2 = json.dumps(ccyres)
@@ -21,6 +25,7 @@ ccyt = len(yobitccy) -1
 ccy = [' ']
 for i in ccydata5['Yobit']:
     print (i)
+<<<<<<< HEAD
     url1.append("https://yobit.net/api/3/trades/" +i.lower()+ "_btc")
     global ccy
     ccy.append(i.lower())
@@ -44,6 +49,12 @@ def get_yob(req):
             else:
                 time.sleep(1) 
 #    print (res1.status_code)
+=======
+    url1.append("https://yobit.net/api/3/trades/" +i+ "_btc")
+    
+def get_yob(req):
+    res1 = scraper.get(url1).json()
+>>>>>>> e143fe9d549cf93da81eaf2485794e189035824b
 #    print(res1)
 #    data2 = json.dumps(res1)
 #    data5 = json.loads(data2)
@@ -87,9 +98,13 @@ for x in range(0, ccyt):
     for y in range(1,10):
     #   time.sleep(10)
         yobjson = get_yob(url1[x+1])
+<<<<<<< HEAD
         global ccy
         ccy2 = ccy[x+1]+ '_btc'
         price1.append(get_val(data_update(yobjson,y,ccy2)))
+=======
+        price1.append(get_val(data_update(yobjson,y)))
+>>>>>>> e143fe9d549cf93da81eaf2485794e189035824b
         print ('price' +str(y)+ ':'+str(price1[y]))
         timeval1.append(get_time(data_update(yobjson,y,ccy2)))
         time1.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y])))

@@ -1033,3 +1033,17 @@ cp sample2.py sample5.py
 ls
 git push origin master
 git init
+git add .
+git push origin master
+git push
+git push origin master
+git pull origin master
+git push origin master
+cp sample5.py sample2.py
+ls
+git push origin master
+git commit -m "First commit"
+git push origin master
+git pull origin master
+git commit -m "First commit"
+git init
