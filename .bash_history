@@ -1015,3 +1015,14 @@ git commit -m "First commit"
 git pull origin master
 git commit -m "First commit"
 git init
+git add .
+git commit -m "First commit"
+git pull origin master
+vi sample9.py
+git commit -m "First commit"
+git pull origin master
+git commit -m "First commit"
+git pull origin master
+git commit -m "First commit"
+git pull origin master
+git init
