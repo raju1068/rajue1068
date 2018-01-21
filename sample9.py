@@ -107,11 +107,6 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-str1 = ''
-for x in range(0, ccyt):
-    t = threading.Thread(target=check_inc, args=(x,))
-    t.setDaemon(True)
-    t.start()
 def check_inc(x1):
     print(url1[x1+1])
     yobjson = data_update(get_yob(url1[x1+1])
@@ -140,6 +135,11 @@ def check_inc(x1):
 #    t = threading.Thread(target=ccy_fun)
 #    t.setDaemon(True)
 #    t.start()
+str1 = ''
+for x in range(0, ccyt):
+    t = threading.Thread(target=check_inc, args=(x,))
+    t.setDaemon(True)
+    t.start()
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
