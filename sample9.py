@@ -79,7 +79,7 @@ def get_time(val1):
 def get_buy(val2):
     while True:
         try:
-            typeval = val2['buy']
+            buyval = val2['buy']
             return buyval
         except TypeError as terr2:
             print (terr2)
@@ -87,7 +87,7 @@ def get_buy(val2):
 def get_sell(val2):
     while True:
         try:
-            typeval = val2['sell']
+            sellval = val2['sell']
             return sellval
         except TypeError as terr2:
             print (terr2)
@@ -107,29 +107,36 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-str = ''
+str1 = ''
 for x in range(0, ccyt):
-    yobjson = data_update(get_yob(url1[x+1]))
+    t = threading.Thread(target=check_inc, args=(x,))
+    t.setDaemon(True)
+    t.start()
+def check_inc(x1):
+    print(url1[x1+1])
+    yobjson = data_update(get_yob(url1[x1+1])
     price1 = get_val(yobjson)
     buyprice = get_buy(yobjson)
     sellprice = get_sell(yobjson) 
-    time1 = get_time(yobjson)
-    if (time1> (time.time()-500)):
         if price1 == buyprice:
-            global str
-            str = 'buy'
+            global str1
+            str1 = 'buy'
         else:
             if price1 == sellprice:
-                global str
-                str = 'sell'
-        global ccy
-        global str
-        ccy2 = ccy[x+1]+ '_btc'
-        sendstr = ccy2+":price Increasing :" + "Type:" + str + "Price: " + str(price1) 
-        chat_id = get_chat_id(last_update(get_updates_json(url)))
-        send_mess(chat_id, sendstr)    
-    
-    
+                global str1
+                str1 = 'sell'
+        if str1 == 'buy':
+            if price1 > prvprice:
+                i = i + 1
+                if i>3:
+                    global ccy
+                    ccy2 = ccy[x1+1]+ '_btc'
+                    sendstr = ccy2+":price Increasing :" + "Type:" + str1 + "Price: " + str(price1) + "PrevPrice:"+ str(prvprice)
+                    chat_id = get_chat_id(last_update(get_updates_json(url)))
+                    send_mess(chat_id, sendstr)   
+                prvprice = price1
+                time.sleep(10)
+                check_inc(x1)    
 #    t = threading.Thread(target=ccy_fun)
 #    t.setDaemon(True)
 #    t.start()

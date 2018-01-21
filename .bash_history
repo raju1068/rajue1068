@@ -1040,3 +1040,42 @@ git add .
 git commit -m "First commit"
 git pull origin master
 git commit -m "First commit"
+git add .
+git commit -m "First commit"
+git pull origin master
+ls
+ls sample*
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+python sample9.py
+vi sample9.py
+git init
