@@ -25,19 +25,19 @@ for i in ccydata5['Yobit']:
     url1.append("https://yobit.net/api/3/trades/" +i.lower()+ "_btc")
     global ccy
     ccy.append(i.lower())
-
 def get_yob(req):
     print (req)
     start_time = time.time()
     while True:
         try:
             res1 = scraper.get(req)
+            time.sleep(1)
             try:
                 data2 = json.dumps(res1.json())
                 data5 = json.loads(data2)
                 return data5
             except ValueError as err:
-                print ('Req ID ' + req + ' Decode JSON invalid')               
+                print ('Req ID ' + req + ' Decode JSON invalid'+ str(err))               
                 break
             except AttributeError as err1:
                 print ('Req ID ' + req + 'Decode JSON invalid')            
@@ -100,34 +100,27 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-prevtype = ' '
-prevtime1n = 0
-sendstr = ' '
-for x in range(0, ccyt):
-    price1=[0]
-    timeval1=[0]
-    typeval1=['']
-    time1=[0]
-    t = threading.Thread(target=ccy_fun)
-    t.setDaemon(True)
-    t.start()
-def ccy_fun():
-    for y in range(1,10):
-    #   time.sleep(10)
-        yobjson = get_yob(url1[x+1])
-        global ccy
-        ccy2 = ccy[x+1]+ '_btc'
+#        time.sleep(1)
+print (time.time()-500)
+def ccy_data(yobjson,ccy2):
+    sendstr = ' '
+    bidflag = True
+    print (ccy2)
+    for y in range(0,10):
         price1.append(get_val(data_update(yobjson,y,ccy2)))
-        print ('price' +str(y)+ ':'+str(price1[y]))
+#        print ('price' +str(y)+ ':'+str(price1[y]))
         timeval1.append(get_time(data_update(yobjson,y,ccy2)))
         time1.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y])))
         typeval1.append(get_type(data_update(yobjson,y,ccy2)))
-        if y> 1:
-            if typeval1[y] == typeval1[y-1] and typeval1[y] == 'bid':
+#        print (timeval1[y-1])
+#        print (time.time()-500)
+        if y> 1 and timeval1[y-1]>(time.time()-500):
+            if typeval1[y] == typeval1[y-1] and typeval1[y] == 'bid'and bidflag == True:
+                bidflag = True
                 print('inside bid')
                 bidflag = True
-                prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
-                time1n = int(datetime.strptime(time1[y-1], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
+                prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))
+                time1n = int(datetime.strptime(time1[y-1], "%Y-%m-%d %H:%M:%S").strftime('%s'))
                 timediff = time1n - prevtime1n
                 pricediff = price1[y-1] - price1[y]
                 print (time1n)
@@ -135,11 +128,13 @@ def ccy_fun():
                 print ('time diff: '+str(timediff))
                 print ('price diff:' +str(pricediff))
                 print ('Type :' + typeval1[y])
-                if timediff > 0 and pricediff > 0 :
+                if timediff > 0 and timediff < 30000 and pricediff > 0 :
+                    global sendstr
                     sendstr = ccy2+":price Increasing :" + "Type:" + str(typeval1[y-1]) + "Price: " + str(price1[y-1]) + "Prev Price: " + str(price1[y])
                     print (sendstr)
             else:
                 bidflag = False
+    global sendstr
     if sendstr > ' ' and bidflag == True:
         print ('inside')
         chat_id = get_chat_id(last_update(get_updates_json(url)))
@@ -150,6 +145,28 @@ def ccy_fun():
     del timeval1[:]
     del time1[:]
     del typeval1[:]
+prevtype = ' '
+prevtime1n = 0
+sendstr = ' '
+price1 = [0]
+timeval1=[0]
+typeval1=['']
+time1=[0]
+def fun_start(ccyt1):
+    for x in range(0, ccyt1):
+#        time.sleep(10)
+        yobjson1 = get_yob(url1[x+1])
+        global ccy
+        ccy21 = ccy[x+1]+'_btc'
+        time.sleep(1)
+        t = threading.Thread(target=ccy_data, args=(yobjson1,ccy21))
+        t.setDaemon(True)
+        t.start()
+for i in range(0,99999):
+    global ccyt
+    fun_start(ccyt)
+
+    
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:

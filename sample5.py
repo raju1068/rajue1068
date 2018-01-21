@@ -31,6 +31,7 @@ def get_yob(req):
     while True:
         try:
             res1 = scraper.get(req)
+            time.sleep(1)
             try:
                 data2 = json.dumps(res1.json())
                 data5 = json.loads(data2)
@@ -105,7 +106,7 @@ def ccy_data(yobjson,ccy2):
     sendstr = ' '
     bidflag = True
     print (ccy2)
-    for y in range(1,10):
+    for y in range(0,10):
         price1.append(get_val(data_update(yobjson,y,ccy2)))
 #        print ('price' +str(y)+ ':'+str(price1[y]))
         timeval1.append(get_time(data_update(yobjson,y,ccy2)))
@@ -147,18 +148,25 @@ def ccy_data(yobjson,ccy2):
 prevtype = ' '
 prevtime1n = 0
 sendstr = ' '
-for x in range(0, ccyt):
-    price1=[0]
-    timeval1=[0]
-    typeval1=['']
-    time1=[0]
-    yobjson1 = get_yob(url1[x+1])
-    global ccy
-    ccy21 = ccy[x+1]+'_btc'
-    time.sleep(1)
-    t = threading.Thread(target=ccy_data, args=(yobjson1,ccy21))
-    t.setDaemon(True)
-    t.start()
+price1 = [0]
+timeval1=[0]
+typeval1=['']
+time1=[0]
+def fun_start(ccyt1):
+    for x in range(0, ccyt1):
+#        time.sleep(10)
+        yobjson1 = get_yob(url1[x+1])
+        global ccy
+        ccy21 = ccy[x+1]+'_btc'
+        time.sleep(1)
+        t = threading.Thread(target=ccy_data, args=(yobjson1,ccy21))
+        t.setDaemon(True)
+        t.start()
+for i in range(0,99999):
+    global ccyt
+    fun_start(ccyt)
+
+    
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:

@@ -1,119 +1,3 @@
-vi sample.py
-python sample.py
-cd ext
-vi dispatcher.py
-ls
-cd.
-cd..
-cd .
-cd ..
-ls
-cd ..
-ls
-cd telegram
-cd ext
-mkdir queue
-ls
-cd ..
-python sample.py
-pip install queuelib
-python sample.py
-cd ext
-pip install queuelib
-python sample.py
-cd ..
-python sample.py
-cd ext
-cd queue
-vi queue.py
-cd ...
-cd ..
-cd..
-cd ..
-vi queue.py
-python sample.py
-vi queue.py
-python sample.py
-cd ext
-vi queue.py
-cd ..
-python sample.py
-cd ext
-cd queue
-ls
-rm queue.py
-ls
-vi Queue.py
-cd ..
-python sample.py
-cd ext
-ls
-vi dispatcher.py
-cd ..
-python sample.py
-pip install future
-python sample.py
-pip install telegram
-python sample.py
-pip install TelegramError
-ls
-ls telegram*
-pip install TelegramError
-python sample.py
-ls TelegramError
-mv sample.py python-telegram-bot
-python sample.py
-;s
-cd ..
-python sample.py
-ls
-cd telegram
-ls
-ls sample*
-cd ..
-ls
-cd ..
-ls
-cd python-telegram-bot
-ls
-cd telegram
-ls
-python sample1.py
-vi sample1.py
-vi sara_bot.py
-ls
-cd
-ls python-telegram-bot
-cd my_env
-cd rajue1068
-cd rajue1068                   
-cd python-telegram-bot
-cd my_env       
-ls
-cd ..
-ls
-cd rajue1068
-ls
-cd ..
-cd rajue1068
-ls
-cd..
-cd ..
-ls
-cd my_env
-source bin/activate
-cd
-cd python-telegram-bot
-cd rajue1068
-ls
-git push -u https://github.com/raju1068/rajue1068
-git pull
-ls
-vi config.json
-python telegram_kraken_bot.py
-vi telegram_kraken_bot.py
-python telegram_kraken_bot.py
-pip install python3-krakenex
 python3 setup.py install
 cd
 python3 setup.py install
@@ -1053,4 +937,69 @@ python sample5.py
 vi sample5.py
 python sample5.py
 vi sample5.py
+git init
+git add .
+git commit -m "First commit"
+git push origin master
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+vi sample5.py
+python sample5.py
+screen
+sudo pip install screen
+screen
+apt-get update
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install screen
+cls
+screen
+screen -r pts
+screen -pts
+screen -r pts
+screen -r 20020.pts
+screen -r 19962.pts
+screen -r 20020.pts
+screen -r 19962.pts
+screen -r 20020.pts
+ls
+screen
+sudo pip install screen
+cp sample5.py sample9.py
+ls
+python sample5.py
+sudo pip install cfscrape
+vi sample9.py
 git init
