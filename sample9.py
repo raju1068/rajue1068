@@ -22,10 +22,9 @@ ccyt = len(yobitccy) -1
 ccy = [' ']
 for i in ccydata5['Yobit']:
     print (i)
-    url1.append("https://yobit.net/api/3/trades/" +i.lower()+ "_btc")
+    url1.append("https://yobit.net/api/2/" +i.lower()+ "_btc/ticker")
     global ccy
     ccy.append(i.lower())
-
 def get_yob(req):
     print (req)
     start_time = time.time()
@@ -52,19 +51,19 @@ def get_yob(req):
 #    data2 = json.dumps(res1)
 #    data5 = json.loads(data2)
 #    return data5
-def data_update(data1,ind,ccy1):
+def data_update(data1):
     while True:
         try:
-            res = data1[ccy1]
+            res = data1['ticker']
             tot = len(res) -1
-            return res[ind]
+            return res
         except TypeError as terr:
             print (terr)
             break
 def get_val(val):
     while True:
         try:
-            amt = val['price']
+            amt = val['last']
             return amt
         except TypeError as verr:
             print (verr)
@@ -72,16 +71,24 @@ def get_val(val):
 def get_time(val1):
     while True:
         try:
-            timeval = val1['timestamp']
+            timeval = val1['updated']
             return timeval
         except TypeError as terr1:
             print (terr1)
             break
-def get_type(val2):
+def get_buy(val2):
     while True:
         try:
-            typeval = val2['type']
-            return typeval
+            typeval = val2['buy']
+            return buyval
+        except TypeError as terr2:
+            print (terr2)
+            break
+def get_sell(val2):
+    while True:
+        try:
+            typeval = val2['sell']
+            return sellval
         except TypeError as terr2:
             print (terr2)
             break
@@ -100,56 +107,32 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-prevtype = ' '
-prevtime1n = 0
-sendstr = ' '
+str = ''
 for x in range(0, ccyt):
-    price1=[0]
-    timeval1=[0]
-    typeval1=['']
-    time1=[0]
-    t = threading.Thread(target=ccy_fun)
-    t.setDaemon(True)
-    t.start()
-def ccy_fun():
-    for y in range(1,10):
-    #   time.sleep(10)
-        yobjson = get_yob(url1[x+1])
+    yobjson = data_update(get_yob(url1[x+1]))
+    price1 = get_val(yobjson)
+    buyprice = get_buy(yobjson)
+    sellprice = get_sell(yobjson) 
+    time1 = get_time(yobjson)
+    if (time1> (time.time()-500)):
+        if price1 == buyprice:
+            global str
+            str = 'buy'
+        else:
+            if price1 == sellprice:
+                global str
+                str = 'sell'
         global ccy
+        global str
         ccy2 = ccy[x+1]+ '_btc'
-        price1.append(get_val(data_update(yobjson,y,ccy2)))
-        print ('price' +str(y)+ ':'+str(price1[y]))
-        timeval1.append(get_time(data_update(yobjson,y,ccy2)))
-        time1.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timeval1[y])))
-        typeval1.append(get_type(data_update(yobjson,y,ccy2)))
-        if y> 1:
-            if typeval1[y] == typeval1[y-1] and typeval1[y] == 'bid':
-                print('inside bid')
-                bidflag = True
-                prevtime1n = int(datetime.strptime(time1[y], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
-                time1n = int(datetime.strptime(time1[y-1], "%Y-%m-%d %H:%M:%S").strftime('%s'))*1000
-                timediff = time1n - prevtime1n
-                pricediff = price1[y-1] - price1[y]
-                print (time1n)
-                print (prevtime1n)
-                print ('time diff: '+str(timediff))
-                print ('price diff:' +str(pricediff))
-                print ('Type :' + typeval1[y])
-                if timediff > 0 and pricediff > 0 :
-                    sendstr = ccy2+":price Increasing :" + "Type:" + str(typeval1[y-1]) + "Price: " + str(price1[y-1]) + "Prev Price: " + str(price1[y])
-                    print (sendstr)
-            else:
-                bidflag = False
-    if sendstr > ' ' and bidflag == True:
-        print ('inside')
+        sendstr = ccy2+":price Increasing :" + "Type:" + str + "Price: " + str(price1) 
         chat_id = get_chat_id(last_update(get_updates_json(url)))
-        str1 = sendstr
-        send_mess(chat_id, str1)       
-        print (time1)
-    del price1[:]
-    del timeval1[:]
-    del time1[:]
-    del typeval1[:]
+        send_mess(chat_id, sendstr)    
+    
+    
+#    t = threading.Thread(target=ccy_fun)
+#    t.setDaemon(True)
+#    t.start()
 def main():  
     update_id = last_update(get_updates_json(url))['update_id']
     while True:
