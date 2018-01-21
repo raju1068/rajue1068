@@ -1036,3 +1036,7 @@ rm sample9.py
 ls sample*
 git commit -m "First commit"
 git init
+git add .
+git commit -m "First commit"
+git pull origin master
+git commit -m "First commit"
