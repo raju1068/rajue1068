@@ -1003,3 +1003,15 @@ python sample5.py
 sudo pip install cfscrape
 vi sample9.py
 git init
+git add .
+git pull origin master
+vi sample9.py
+git pull origin master
+rm sample9.py
+ls
+vi sample9
+git pull origin master
+git commit -m "First commit"
+git pull origin master
+git commit -m "First commit"
+git init
