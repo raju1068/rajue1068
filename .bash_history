@@ -1026,3 +1026,13 @@ git pull origin master
 git commit -m "First commit"
 git pull origin master
 git init
+git add .
+git commit -m "First commit"
+git pull origin master
+ls
+vi sample9.py
+ls sample*
+rm sample9.py
+ls sample*
+git commit -m "First commit"
+git init
