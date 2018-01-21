@@ -107,7 +107,7 @@ def send_mess(chat, text):
     params = {'chat_id': chat, 'text': text}
     response = requests.post(url + 'sendMessage', data=params)
     return response
-def check_inc(x1):
+def check_inc1(x1):
     print(url1[x1+1])
     yobjson = data_update(get_yob(url1[x1+1])
     price1 = get_val(yobjson)
@@ -137,7 +137,8 @@ def check_inc(x1):
 #    t.start()
 str1 = ''
 for x in range(0, ccyt):
-    t = threading.Thread(target=check_inc, args=(x,))
+                          print(x)
+    t = threading.Thread(target=check_inc1, args=(x,))
     t.setDaemon(True)
     t.start()
 def main():  
